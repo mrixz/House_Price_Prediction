@@ -1,38 +1,50 @@
-# House_Price_Prediction
-
-
 # 🏠 House Price Prediction using Multiple Linear Regression
 
-## 📌 Project Overview
+## 📖 Overview
 
-This project predicts house prices using **Multiple Linear Regression**, one of the fundamental supervised machine learning algorithms. The model learns the relationship between various house features such as area, number of bedrooms, bathrooms, parking, and furnishing status to estimate the selling price of a house.
+This project predicts house prices using **Multiple Linear Regression**, one of the fundamental supervised machine learning algorithms.
 
-This project is part of my Machine Learning learning journey, focusing on understanding the complete ML workflow from data preprocessing to model evaluation.
+The project demonstrates the complete machine learning pipeline, from downloading the dataset using the Kaggle API to preprocessing, feature engineering, model training, prediction, and evaluation.
+
+This project is part of my **Machine Learning Learning Series**, where I learn ML concepts by building practical projects.
+
+---
+
+## 🎯 Objectives
+
+- Learn Multiple Linear Regression
+- Understand data preprocessing techniques
+- Perform feature engineering
+- Train and evaluate a regression model
+- Interpret regression metrics
 
 ---
 
 ## 🚀 Features
 
-- Data preprocessing
-- Handling missing values
-- One-Hot Encoding for categorical features
-- Feature Scaling using StandardScaler
-- Train-Test Split
-- Multiple Linear Regression model
-- Model evaluation using MAE, MSE, RMSE, and R² Score
-- Feature coefficient analysis
-- Actual vs Predicted price comparison
+- 📥 Dataset downloaded automatically using Kaggle API
+- 📊 Exploratory Data Analysis (EDA)
+- 🧹 Missing Value Handling
+- 🔤 One-Hot Encoding
+- ⚙️ Feature Engineering
+- 📏 Feature Scaling using StandardScaler
+- ✂️ Train-Test Split
+- 📈 Multiple Linear Regression Model
+- 📉 Model Evaluation
+- 📋 Feature Coefficient Analysis
+- 🔍 Actual vs Predicted Price Comparison
 
 ---
 
 ## 🛠️ Technologies Used
 
 - Python
-- Pandas
 - NumPy
+- Pandas
 - Matplotlib
+- Seaborn
 - Scikit-learn
-- Google Colab / Jupyter Notebook
+- Kaggle API
 
 ---
 
@@ -41,126 +53,112 @@ This project is part of my Machine Learning learning journey, focusing on unders
 ```
 House_Price_Prediction/
 │
-├── data/
-│   └── Housing.csv
-│
 ├── House_Price_Prediction.ipynb
-├── requirements.txt
 ├── README.md
-└── .gitignore
+└── requirements.txt
 ```
 
 ---
 
 ## 📊 Machine Learning Workflow
 
-1. Import Libraries
-2. Load Dataset
-3. Explore Dataset
-4. Handle Missing Values
-5. Encode Categorical Features
-6. Feature Scaling
-7. Split Dataset into Training and Testing Sets
-8. Train Multiple Linear Regression Model
-9. Make Predictions
-10. Evaluate Model Performance
-11. Analyze Feature Coefficients
+1. Install and configure Kaggle API
+2. Download dataset
+3. Load dataset
+4. Explore dataset
+5. Handle missing values
+6. Encode categorical variables
+7. Perform feature engineering
+8. Scale features
+9. Split dataset into training and testing sets
+10. Train Multiple Linear Regression model
+11. Predict house prices
+12. Evaluate model performance
 
 ---
 
-## 📈 Evaluation Metrics
+## 📈 Model Performance
 
-The model is evaluated using:
+| Metric | Value |
+|---------|-------|
+| Mean Absolute Error (MAE) | **970,043.40** |
+| Mean Squared Error (MSE) | **1,754,318,687,330.67** |
+| Root Mean Squared Error (RMSE) | **1,324,506.96** |
+| R² Score | **0.6529** |
 
-- Mean Absolute Error (MAE)
-- Mean Squared Error (MSE)
-- Root Mean Squared Error (RMSE)
-- R² Score
+### 📌 Model Fit
 
-These metrics help measure the prediction accuracy and overall performance of the model.
+The Multiple Linear Regression model achieved an **R² Score of 0.6529**, meaning it explains approximately **65.3% of the variance** in house prices.
+
+> **Note:** Regression models do not use "Accuracy" as an evaluation metric. The R² Score is the standard metric used to evaluate regression performance.
 
 ---
 
-## 📌 Concepts Learned
+## 📚 Concepts Learned
 
-- Supervised Learning
 - Multiple Linear Regression
-- Feature Engineering
+- Data Cleaning
+- Handling Missing Values
 - One-Hot Encoding
-- Standardization (StandardScaler)
+- Feature Engineering
+- Feature Scaling
 - Train-Test Split
-- Model Evaluation
-- Feature Importance
-- Prediction using Machine Learning
+- Model Training
+- Model Prediction
+- Regression Evaluation Metrics
 
 ---
 
 ## ▶️ How to Run
 
-1. Clone the repository
+### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/House_Price_Prediction.git
+git clone https://github.com/yourusername/House_Price_Prediction.git
 ```
 
-2. Navigate to the project directory
-
-```bash
-cd House_Price_Prediction
-```
-
-3. Install the required packages
+### 2. Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-4. Open the Jupyter Notebook or Google Colab notebook and run all the cells.
+### 3. Download Kaggle API Key
+
+- Log in to Kaggle.
+- Go to **Account**.
+- Click **Create New API Token**.
+- A `kaggle.json` file will be downloaded.
+
+### 4. Run the notebook
+
+Open `House_Price_Prediction.ipynb` in **Google Colab** or **Jupyter Notebook**.
+
+The notebook will:
+
+- Configure the Kaggle API
+- Download the dataset automatically
+- Train the model
+- Evaluate the model
 
 ---
 
-## 📷 Sample Output
+## 📌 Dataset
 
-The model predicts house prices based on input features and compares the predicted values with the actual prices.
+The dataset is downloaded directly using the **Kaggle API** at runtime.
 
-Example:
-
-| Actual Price | Predicted Price |
-|--------------|----------------:|
-| 4060000 | 5164654 |
-| 6650000 | 7224722 |
-| 3710000 | 3109863 |
+No manual dataset download is required.
 
 ---
 
-## 📚 Dataset
-
-Housing Price Dataset containing numerical and categorical features such as:
-
-- Area
-- Bedrooms
-- Bathrooms
-- Stories
-- Parking
-- Main Road
-- Guest Room
-- Basement
-- Air Conditioning
-- Furnishing Status
-- Price (Target Variable)
-
----
-The Multiple Linear Regression model achieved an R² score of 0.653, explaining approximately 65.3% of the variance in house prices. This project focuses on understanding the complete regression workflow rather than maximizing predictive performance.
-
-## 🎯 Future Improvements
+## 🔮 Future Improvements
 
 - Polynomial Regression
-- Decision Tree Regressor
-- Random Forest Regressor
-- XGBoost Regressor
+- Decision Tree Regression
+- Random Forest Regression
+- XGBoost Regression
 - Hyperparameter Tuning
-- Cross Validation
-- Model Deployment using Flask or FastAPI
+- Model Deployment using Flask or Streamlit
 
 ---
 
@@ -168,4 +166,14 @@ The Multiple Linear Regression model achieved an R² score of 0.653, explaining 
 
 **T S Mridul Narayanan**
 
-Machine Learning Learning Journey 🚀
+Computer Science Engineering Student
+
+Machine Learning Learning Series
+
+Project 2: House Price Prediction using Multiple Linear Regression
+
+---
+
+## ⭐ If you found this project useful
+
+Give this repository a ⭐ on GitHub if you found it helpful or learned something from it!
