@@ -150,6 +150,7 @@ Housing Price Dataset containing numerical and categorical features such as:
 - Price (Target Variable)
 
 ---
+The Multiple Linear Regression model achieved an R² score of 0.653, explaining approximately 65.3% of the variance in house prices. This project focuses on understanding the complete regression workflow rather than maximizing predictive performance.
 
 ## 🎯 Future Improvements
 
